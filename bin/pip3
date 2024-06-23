@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/hitesh/Workspace/WCD/LGD Directory Automation/bin/python3.12" "$0" "$@"
-' '''
+#!/Users/hitesh/Workspace/WCD/lgd_directory_automation/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

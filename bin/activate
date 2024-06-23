@@ -39,10 +39,10 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
-    export VIRTUAL_ENV=$(cygpath "/Users/hitesh/Workspace/WCD/LGD Directory Automation")
+    export VIRTUAL_ENV=$(cygpath "/Users/hitesh/Workspace/WCD/lgd_directory_automation")
 else
     # use the path as-is
-    export VIRTUAL_ENV="/Users/hitesh/Workspace/WCD/LGD Directory Automation"
+    export VIRTUAL_ENV="/Users/hitesh/Workspace/WCD/lgd_directory_automation"
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -59,9 +59,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(LGD Directory Automation) ${PS1:-}"
+    PS1="(lgd_directory_automation) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(LGD Directory Automation) "
+    VIRTUAL_ENV_PROMPT="(lgd_directory_automation) "
     export VIRTUAL_ENV_PROMPT
 fi
 

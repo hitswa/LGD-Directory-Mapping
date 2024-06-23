@@ -3,6 +3,7 @@ import json
 
 
 filePath = "Data/LGD Latest/Andaman And Nicobar Islands/"
+output_location = "Data/output/Andaman And Nicobar Islands/"
 
 def check_empty_row(row):
     empty_status = False
@@ -25,7 +26,7 @@ def write_csv_file(data, file):
     for row in data:
         csv_data.append('"' + '","'.join(row) + '"')
 
-    with open(file + '.csv', 'w') as f:
+    with open(output_location + file + '.csv', 'w') as f:
         f.write('\n'.join(csv_data))
 
 def write_json_file(data, file):
@@ -43,7 +44,7 @@ def write_json_file(data, file):
 
         json_data.append(row_json)
         
-    with open(file + '.json', "w") as json_file:
+    with open(output_location + file + '.json', "w") as json_file:
         json.dump(json_data, json_file, indent=4)
 
 def get_csv_data( path, file, columns ):
@@ -73,7 +74,7 @@ def get_csv_data( path, file, columns ):
                 final_data.append(temp)
 
     write_csv_file(final_data, file)
-    write_json_file(final_data, file)
+    # write_json_file(final_data, file)
 
     return final_data
 
